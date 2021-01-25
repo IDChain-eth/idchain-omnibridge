@@ -56,7 +56,7 @@ export const TransferButton = () => {
     } else if (receiver && !utils.isAddress(receiver)) {
       showError(`Please specify a valid recipient address`);
     } else if (isNativexDaiToken) {
-      showError(`Token is native ERC20 on xDai chain`);
+      showError(`Token is native ERC20 on IDChain chain`);
     } else {
       return true;
     }

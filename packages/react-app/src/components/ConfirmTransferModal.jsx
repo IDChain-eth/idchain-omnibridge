@@ -45,11 +45,11 @@ export const ConfirmTransferModal = ({ isOpen, onClose }) => {
   const isBridgedToken = fromToken.name.endsWith(isxDai ? 'xDai' : 'Mainnet');
   const fromAmt = formatValue(fromAmount, fromToken.decimals);
   const fromUnit = isBridgedToken
-    ? fromToken.symbol + (isxDai ? ' on xDai' : ' on Mainnet')
+    ? fromToken.symbol + (isxDai ? ' on IDChain' : ' on Mainnet')
     : fromToken.symbol;
   const toAmt = formatValue(toAmount, toToken.decimals);
   const toUnit = !isBridgedToken
-    ? toToken.symbol + (!isxDai ? ' on xDai' : ' on Mainnet')
+    ? toToken.symbol + (!isxDai ? ' on IDChain' : ' on Mainnet')
     : toToken.symbol;
   const isERC20Dai = isERC20DaiAddress(fromToken);
 

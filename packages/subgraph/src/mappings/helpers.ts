@@ -18,7 +18,7 @@ function getOverrides(): TypedMap<Address, TokenObject> {
   owlOverride.address = Address.fromString(
     '0x0905Ab807F8FD040255F0cF8fa14756c1D824931',
   );
-  owlOverride.name = 'OWL on xDAI';
+  owlOverride.name = 'OWL on IDChain';
   owlOverride.symbol = 'OWL';
   owlOverride.decimals = 18;
   overrides.set(
