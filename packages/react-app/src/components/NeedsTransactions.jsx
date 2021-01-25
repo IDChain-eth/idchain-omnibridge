@@ -33,7 +33,7 @@ export const NeedsTransactions = () => {
       <Flex align="center" fontSize="12px" p={4}>
         <Text>
           The claim process requires 2 transactions, one on IDChain chain and
-          one on ETH Mainnet. You will need some xDai and approximately{' '}
+          one on ETH Mainnet. You will need some IDChain and approximately{' '}
           {gasCostInETHString} ETH ({gasCostInUSDString} USD) to complete.
         </Text>
       </Flex>

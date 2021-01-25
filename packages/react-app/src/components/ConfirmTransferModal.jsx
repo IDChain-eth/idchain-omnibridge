@@ -42,7 +42,9 @@ export const ConfirmTransferModal = ({ isOpen, onClose }) => {
   const toast = useToast();
   if (!fromToken || !toToken) return null;
   const isxDai = isxDaiChain(fromToken.chainId);
-  const isBridgedToken = fromToken.name.endsWith(isxDai ? 'xDai' : 'Mainnet');
+  const isBridgedToken = fromToken.name.endsWith(
+    isxDai ? 'IDChain' : 'Mainnet',
+  );
   const fromAmt = formatValue(fromAmount, fromToken.decimals);
   const fromUnit = isBridgedToken
     ? fromToken.symbol + (isxDai ? ' on IDChain' : ' on Mainnet')

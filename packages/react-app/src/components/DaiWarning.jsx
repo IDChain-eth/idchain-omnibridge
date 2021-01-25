@@ -25,14 +25,10 @@ export const DaiWarning = () => {
       <Alert status="warning" borderRadius={5} mb={5}>
         <AlertIcon minWidth="20px" />
         <Text fontSize="small">
-          Bridges DAI on Ethereum to DAI on IDChain, DOES NOT mint native xDai.
-          If you want native xDai, use the&nbsp;
-          <Link
-            href="https://dai-bridge.poa.network"
-            color="blue.500"
-            isExternal
-          >
-            xDai Bridge
+          Bridges DAI on Ethereum to DAI on IDChain, DOES NOT mint native
+          IDChain. If you want native IDchain, use the&nbsp;
+          <Link href="https://dai.idchain.one/" color="blue.500" isExternal>
+            DAI Bridge
           </Link>
           .
         </Text>

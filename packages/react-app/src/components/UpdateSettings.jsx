@@ -24,7 +24,7 @@ export const UpdateSettings = ({ close }) => {
   const initialRef = useRef();
   const localMainnetRPC = window.localStorage.getItem('mainnet-rpc-url');
   const [mainnetRPC, setMainnetRPC] = useState(localMainnetRPC || '');
-  const localXDaiRPC = window.localStorage.getItem('xdai-rpc-url');
+  const localXDaiRPC = window.localStorage.getItem('idchain-rpc-url');
   const [xdaiRPC, setXDaiRPC] = useState(localXDaiRPC || '');
   const localInfiniteUnlock =
     window.localStorage.getItem('infinite-unlock') === 'true';
@@ -39,7 +39,7 @@ export const UpdateSettings = ({ close }) => {
   const onSave = () => {
     if (!isChanged) return;
     window.localStorage.setItem('mainnet-rpc-url', mainnetRPC);
-    window.localStorage.setItem('xdai-rpc-url', xdaiRPC);
+    window.localStorage.setItem('idchain-rpc-url', xdaiRPC);
     window.localStorage.setItem('infinite-unlock', infiniteUnlock.toString());
     onClose();
   };
@@ -105,7 +105,7 @@ export const UpdateSettings = ({ close }) => {
                     value={mainnetRPC}
                   />
                 </InputGroup>
-                <Text mb={2}>Custom xDai RPC URL</Text>
+                <Text mb={2}>Custom IDChain RPC URL</Text>
                 <InputGroup mb={4} borderColor="#DAE3F0">
                   <Input
                     id="decimals"
