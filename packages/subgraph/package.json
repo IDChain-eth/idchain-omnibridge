@@ -12,12 +12,15 @@
     "prepare-xdai": "mustache config/xdai.json subgraph.template.yaml > subgraph.yaml",
     "prepare-kovan": "mustache config/kovan.json subgraph.template.yaml > subgraph.yaml",
     "prepare-sokol": "mustache config/sokol.json subgraph.template.yaml > subgraph.yaml",
+    "prepare-idchain": "mustache config/idchain.json subgraph.template.yaml > subgraph.yaml",
     "codegen": "graph codegen --output-dir src/types/",
     "build": "graph build",
     "deploy-mainnet": "graph deploy raid-guild/mainnet-omnibridge --ipfs https://api.thegraph.com/ipfs/ --node https://api.thegraph.com/deploy/",
     "deploy-xdai": "graph deploy raid-guild/xdai-omnibridge --ipfs https://api.thegraph.com/ipfs/ --node https://api.thegraph.com/deploy/",
     "deploy-kovan": "graph deploy dan13ram/kovan-omnibridge --ipfs https://api.thegraph.com/ipfs/ --node https://api.thegraph.com/deploy/",
-    "deploy-sokol": "graph deploy dan13ram/sokol-omnibridge --ipfs https://api.thegraph.com/ipfs/ --node https://api.thegraph.com/deploy/"
+    "deploy-sokol": "graph deploy dan13ram/sokol-omnibridge --ipfs https://api.thegraph.com/ipfs/ --node https://api.thegraph.com/deploy/",
+    "create-idchain": "graph create --node http://localhost:8020/ idchain-omnibridge",
+    "deploy-idchain": "graph deploy idchain-omnibridge --ipfs http://localhost:5001 --node http://localhost:8020/"
   },
   "devDependencies": {
     "mustache": "^4.0.1"

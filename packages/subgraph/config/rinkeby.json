@@ -1,0 +1,6 @@
+{
+  "network": "rinkeby",
+  "startBlock": "7206022",
+  "mediator": "0xE2b217cfe15B36B6A9bb340b0190cf07C87f95Fe",
+  "amb": "0x585B9060FA547b11ebE6C710DcaAb5Ad63ACf512"
+}
