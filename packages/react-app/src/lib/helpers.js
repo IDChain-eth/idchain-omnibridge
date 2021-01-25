@@ -15,12 +15,8 @@ import { getOverriddenMediator, isOverridden } from './overrides';
 export const getBridgeNetwork = chainId => {
   switch (chainId) {
     case 1:
-      return 100;
-    case 42:
-      return 77;
-    case 77:
-      return 42;
-    case 100:
+      return 74;
+    case 74:
     default:
       return 1;
   }
@@ -30,18 +26,14 @@ export const isxDaiChain = chainId => {
   switch (chainId) {
     case 1:
       return false;
-    case 42:
-      return false;
-    case 77:
-      return true;
-    case 100:
+    case 74:
     default:
       return true;
   }
 };
 
 export const getDefaultToken = chainId =>
-  defaultTokens[chainId] || defaultTokens[100];
+  defaultTokens[chainId] || defaultTokens[74];
 
 export const getMediatorAddressWithOverride = (tokenAddress, chainId) => {
   if (isOverridden(tokenAddress)) {
@@ -51,20 +43,20 @@ export const getMediatorAddressWithOverride = (tokenAddress, chainId) => {
 };
 
 export const getMediatorAddress = chainId =>
-  mediators[chainId].toLowerCase() || mediators[100].toLowerCase();
+  mediators[chainId].toLowerCase() || mediators[74].toLowerCase();
 
 export const getNetworkName = chainId => networkNames[chainId] || 'Unknown';
 export const getNetworkLabel = chainId => networkLabels[chainId] || 'Unknown';
-export const getAMBAddress = chainId => ambs[chainId] || ambs[100];
+export const getAMBAddress = chainId => ambs[chainId] || ambs[74];
 export const getGraphEndpoint = chainId =>
-  graphEndpoints[chainId] || graphEndpoints[100];
-export const getRPCUrl = chainId => (chainUrls[chainId] || chainUrls[100]).rpc;
+  graphEndpoints[chainId] || graphEndpoints[74];
+export const getRPCUrl = chainId => (chainUrls[chainId] || chainUrls[74]).rpc;
 export const getExplorerUrl = chainId =>
-  (chainUrls[chainId] || chainUrls[100]).explorer;
+  (chainUrls[chainId] || chainUrls[74]).explorer;
 export const getTokenListUrl = chainId =>
-  defaultTokensUrl[chainId] || defaultTokensUrl[100];
+  defaultTokensUrl[chainId] || defaultTokensUrl[74];
 export const getMonitorUrl = (chainId, hash) =>
-  `${(chainUrls[chainId] || chainUrls[100]).monitor}/${chainId}/${hash}`;
+  `${(chainUrls[chainId] || chainUrls[74]).monitor}/${chainId}/${hash}`;
 
 export const uniqueTokens = list => {
   const seen = {};
