@@ -9,7 +9,7 @@ export const LARGEST_UINT256 = BigNumber.from(
 export const POLLING_INTERVAL =
   process.env.REACT_APP_UI_STATUS_UPDATE_INTERVAL || 1000;
 
-export const HOME_NETWORK = process.env.REACT_APP_HOME_NETWORK;
+export const HOME_NETWORK = 74;
 
 export const INFURA_ID = process.env.REACT_APP_INFURA_ID;
 
