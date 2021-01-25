@@ -63,7 +63,7 @@ export const defaultTokens = {
 };
 
 export const graphEndpoints = {
-  74: 'https://api.thegraph.com/subgraphs/name/raid-guild/xdai-omnibridge',
+  74: 'https://graph.idchain.one/subgraphs/name/idchain-omnibridge',
   1: 'https://api.thegraph.com/subgraphs/name/crisog/idchain-omnibridge',
 };
 
