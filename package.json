@@ -17,7 +17,7 @@
     "subgraph:prepare-sokol": "yarn workspace @omnibridge/subgraph prepare-sokol",
     "subgraph:deploy-sokol": "yarn workspace @omnibridge/subgraph deploy-sokol",
     "subgraph:create-idchain": "yarn workspace @omnibridge/subgraph create-idchain",
-    "subgraph:remove-idchain": "yarn workspace @omnibridge/subgraph create-idchain",
+    "subgraph:remove-idchain": "yarn workspace @omnibridge/subgraph remove-idchain",
     "subgraph:prepare-idchain": "yarn workspace @omnibridge/subgraph prepare-idchain",
     "subgraph:deploy-idchain": "yarn workspace @omnibridge/subgraph deploy-idchain",
     "subgraph:prepare-mainnet": "yarn workspace @omnibridge/subgraph prepare-mainnet",
