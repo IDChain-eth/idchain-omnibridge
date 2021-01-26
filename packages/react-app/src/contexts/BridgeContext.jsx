@@ -96,10 +96,12 @@ export const BridgeProvider = ({ children }) => {
     setFromAmount(0);
     setAllowed(true);
     setToAmount(0);
+    console.log(tokenWithoutMode);
     const [token, gotToToken] = await Promise.all([
       fetchTokenDetails(tokenWithoutMode),
       fetchToToken(tokenWithoutMode),
     ]);
+    console.log(token, gotToToken);
     setToToken(gotToToken);
     setFromToken(token);
     setLoading(false);
