@@ -25,7 +25,7 @@ export const networkLabels = {
 
 export const chainUrls = {
   74: {
-    rpc: process.env.REACT_APP_HOME_RPC_URL || 'https://idchain.one/rpc/',
+    rpc: process.env.REACT_APP_HOME_RPC_URL || 'https://idchain.one/rpc',
     explorer:
       process.env.REACT_APP_HOME_EXPLORER_PREFIX ||
       'https://explorer.idchain.one',

@@ -15,14 +15,14 @@ import { fetchTokenDetails } from './token';
 const getToName = (fromName, fromxDai) => {
   if (REVERSE_BRIDGE_ENABLED) {
     if (fromxDai) {
-      if (fromName.includes('on IDChain')) return fromName.slice(0, -8);
+      if (fromName.includes('on IDChain')) return fromName.slice(0, -11);
       return `${fromName} on Mainnet`;
     }
     if (fromName.includes('on Mainnet')) return fromName.slice(0, -11);
     return `${fromName} on IDChain`;
   }
   if (fromxDai) {
-    if (fromName.includes('on IDChain')) return fromName.slice(0, -8);
+    if (fromName.includes('on IDChain')) return fromName.slice(0, -11);
     return fromName;
   }
   return `${fromName} on IDChain`;
