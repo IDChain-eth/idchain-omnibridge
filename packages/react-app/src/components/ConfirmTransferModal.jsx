@@ -67,15 +67,22 @@ export const ConfirmTransferModal = ({ isOpen, onClose }) => {
   };
   const onClick = () => {
     transfer().catch(error => {
-      if (
-        error &&
-        error.message &&
-        !error.message.includes('User denied transaction signature')
-      ) {
+      if (error && error.message) {
+        showError(error.message);
+      } else {
         showError(
           'Impossible to perform the operation. Reload the application and try again.',
         );
       }
+      // if (
+      //   error &&
+      //   error.message &&
+      //   !error.message.includes('User denied transaction signature')
+      // ) {
+      //   showError(
+      //     'Impossible to perform the operation. Reload the application and try again.',
+      //   );
+      // }
     });
     onClose();
   };
@@ -86,7 +93,7 @@ export const ConfirmTransferModal = ({ isOpen, onClose }) => {
         <ModalContent
           boxShadow="0px 1rem 2rem #617492"
           borderRadius="1rem"
-          maxW="32rem"
+          maxW="38rem"
           mx={{ base: 12, lg: 0 }}
         >
           <ModalHeader p={6}>
