@@ -10,26 +10,6 @@ const FOREIGN_SUBGRAPH = getSubgraphName(FOREIGN_NETWORK);
 
 const healthQuery = gql`
   query getHealthStatus($subgraphHome: String!, $subgraphForeign: String!) {
-    homeHealth: indexingStatusForCurrentVersion(subgraphName: $subgraphHome) {
-      synced
-      health
-      fatalError {
-        message
-        block {
-          number
-          hash
-        }
-        handler
-      }
-      chains {
-        chainHeadBlock {
-          number
-        }
-        latestBlock {
-          number
-        }
-      }
-    }
     foreignHealth: indexingStatusForCurrentVersion(
       subgraphName: $subgraphForeign
     ) {
