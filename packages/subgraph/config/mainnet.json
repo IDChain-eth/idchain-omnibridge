@@ -1,6 +1,7 @@
 {
   "network": "mainnet",
   "startBlock": "10884620",
-  "mediator": "0xc47192E48F75B612c792833C8b54Ad6BE319af90",
-  "amb": "0x33d136C1501709Ee020D7A8CA56D44DAcb15e227"
+  "omnibridge": "0xc47192E48F75B612c792833C8b54Ad6BE319af90",
+  "amb": "0x33d136C1501709Ee020D7A8CA56D44DAcb15e227",
+  "bridges": []
 }

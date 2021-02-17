@@ -64,9 +64,14 @@ export const defaultTokens = {
   },
 };
 
+export const subgraphNames = {
+  74: 'idchain-omnibridge',
+  1: 'crisog/idchain-omnibridge',
+};
+
 export const graphEndpoints = {
-  74: 'https://graph.idchain.one/subgraphs/name/idchain-omnibridge',
-  1: 'https://api.thegraph.com/subgraphs/name/crisog/idchain-omnibridge',
+  74: `https://graph.idchain.one/subgraphs/name/${subgraphNames[74]}`,
+  1: `https://api.thegraph.com/subgraphs/name/${subgraphNames[1]}`,
 };
 
 export const mediators = {
@@ -94,3 +99,6 @@ export const defaultTokensUrl = {
   74: 'https://unpkg.com/idchain-default-token-list@latest/build/uniswap-default.tokenlist.json',
   1: 'https://tokens.uniswap.org',
 };
+
+export const GRAPH_HEALTH_ENDPOINT =
+  'https://api.thegraph.com/index-node/graphql';

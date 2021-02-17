@@ -121,7 +121,7 @@ export const HistoryItem = ({
         setTxHash(tx.hash);
       } catch (executeError) {
         setLoading(false);
-        logError({ executeError });
+        logError({ executeError, chainId: providerChainId, message });
       }
     }
   };
