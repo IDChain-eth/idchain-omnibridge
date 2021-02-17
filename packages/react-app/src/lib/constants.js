@@ -54,11 +54,13 @@ export const defaultTokens = {
     address: '0x2b309226500ADc5956a422950A2AD6E6333Bb315',
     chainId: 74,
     symbol: 'WEIDI',
+    name: 'Wrapped EIDI',
   },
   1: {
     address: '0x61CEAc48136d6782DBD83c09f51E23514D12470a',
     chainId: 1,
     symbol: 'Subs',
+    name: 'Subscriptions',
   },
 };
 
