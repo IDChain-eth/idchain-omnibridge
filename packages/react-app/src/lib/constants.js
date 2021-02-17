@@ -59,8 +59,9 @@ export const defaultTokens = {
   1: {
     address: '0x61CEAc48136d6782DBD83c09f51E23514D12470a',
     chainId: 1,
-    symbol: 'Subs',
     name: 'Subscriptions',
+    symbol: 'Subs',
+    decimals: 0,
   },
 };
 
