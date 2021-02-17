@@ -20,7 +20,6 @@ import React, { useContext, useEffect, useState } from 'react';
 import TransferImage from '../assets/confirm-transfer.svg';
 import { BridgeContext } from '../contexts/BridgeContext';
 import { formatValue, getAccountString, isxDaiChain } from '../lib/helpers';
-import { DaiWarning, isERC20DaiAddress } from './DaiWarning';
 import { NeedsTransactions } from './NeedsTransactions';
 
 export const ConfirmTransferModal = ({ isOpen, onClose }) => {
@@ -53,7 +52,6 @@ export const ConfirmTransferModal = ({ isOpen, onClose }) => {
   const toUnit = !isBridgedToken
     ? toToken.symbol + (!isxDai ? ' on IDChain' : ' on Mainnet')
     : toToken.symbol;
-  const isERC20Dai = isERC20DaiAddress(fromToken);
 
   const showError = msg => {
     if (msg) {
@@ -97,7 +95,6 @@ export const ConfirmTransferModal = ({ isOpen, onClose }) => {
           mx={{ base: 12, lg: 0 }}
         >
           <ModalHeader p={6}>
-            {isERC20Dai && <DaiWarning />}
             <Text>Confirm Transfer</Text>
           </ModalHeader>
           <ModalCloseButton
