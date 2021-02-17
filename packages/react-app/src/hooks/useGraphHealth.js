@@ -31,8 +31,6 @@ export const useGraphHealth = (description, onlyHome = false) => {
 
   const isHome = providerChainId === HOME_NETWORK;
 
-  const [homeHealthy, setHomeHealthy] = useState(true);
-
   const [foreignHealthy, setForeignHealthy] = useState(true);
 
   const [loading, setLoading] = useState(false);
@@ -49,7 +47,7 @@ export const useGraphHealth = (description, onlyHome = false) => {
       try {
         setLoading(true);
         const [
-          { homeHealth, foreignHealth },
+          { foreignHealth },
           homeBlockNumber,
           foreignBlockNumber,
         ] = await Promise.all([
@@ -58,21 +56,11 @@ export const useGraphHealth = (description, onlyHome = false) => {
           getEthersProvider(FOREIGN_NETWORK).getBlockNumber(),
         ]);
         logDebug({
-          homeHealth,
           foreignHealth,
           homeBlockNumber,
           foreignBlockNumber,
           message: 'updated graph health data',
         });
-
-        setHomeHealthy(
-          homeHealth &&
-            homeHealth.isReachable &&
-            !homeHealth.isFailed &&
-            homeHealth.isSynced &&
-            Math.abs(homeHealth.latestBlockNumber - homeBlockNumber) <
-              THRESHOLD_BLOCKS,
-        );
 
         setForeignHealthy(
           foreignHealth &&
@@ -108,7 +96,7 @@ export const useGraphHealth = (description, onlyHome = false) => {
       if (toastIdRef.current) {
         toast.close(toastIdRef.current);
       }
-      if (!(homeHealthy && foreignHealthy)) {
+      if (!foreignHealthy) {
         if (onlyHome && !isHome) return;
         toastIdRef.current = toast({
           title: 'Subgraph Error',
@@ -119,13 +107,5 @@ export const useGraphHealth = (description, onlyHome = false) => {
         });
       }
     }
-  }, [
-    homeHealthy,
-    foreignHealthy,
-    loading,
-    toast,
-    onlyHome,
-    isHome,
-    description,
-  ]);
+  }, [foreignHealthy, loading, toast, onlyHome, isHome, description]);
 };

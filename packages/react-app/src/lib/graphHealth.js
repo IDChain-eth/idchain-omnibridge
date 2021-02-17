@@ -5,7 +5,6 @@ import { getBridgeNetwork, getSubgraphName, logError } from './helpers';
 
 const FOREIGN_NETWORK = getBridgeNetwork(HOME_NETWORK);
 
-const HOME_SUBGRAPH = getSubgraphName(HOME_NETWORK);
 const FOREIGN_SUBGRAPH = getSubgraphName(FOREIGN_NETWORK);
 
 const healthQuery = gql`
