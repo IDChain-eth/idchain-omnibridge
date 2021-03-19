@@ -62,6 +62,7 @@ export const defaultTokens = {
     name: 'Subscriptions',
     symbol: 'Subs',
     decimals: 0,
+    logoURI: "https://etherscan.io/token/images/subscriptions_32.png"
   },
 };
 
