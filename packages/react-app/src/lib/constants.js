@@ -98,7 +98,7 @@ export const REVERSE_BRIDGE_ENABLED =
 
 export const defaultTokensUrl = {
   74: 'https://unpkg.com/idchain-default-token-list@latest/build/uniswap-default.tokenlist.json',
-  1: 'https://tokens.uniswap.org',
+  1: 'https://raw.githubusercontent.com/IDChain-eth/default-token-list/master/compiled/uniswap-default-mainnet.tokenlist.json',
 };
 
 export const GRAPH_HEALTH_ENDPOINT =
