@@ -32,15 +32,8 @@ export const NeedsTransactions = () => {
       </Flex>
       <Flex align="center" fontSize="12px" p={2} pl={4}>
         <Text>
-          {`The claim process requires 2 transactions, one on xDai chain and one
-          on ETH Mainnet. You will need some xDai and approximately ${gasCostInETHString} ETH (${gasCostInUSDString} USD) to complete. When claiming, your wallet may show a higher, less accurate estimate (`}
-          <Link
-            href="https://www.xdaichain.com/about-xdai/faqs/bridges-xdai-bridge-and-omnibridge#metamask-is-showing-very-high-fees-to-claim-a-transaction-on-ethereum-tokens-bridged-from-xdai-to-ethereum-is-this-estimate-accurate"
-            isExternal
-            color="blue.400"
-          >
-            learn more
-          </Link>
+          {`The claim process requires 2 transactions, one on IDChain and one
+          on ETH Mainnet. You will need some EIDI and approximately ${gasCostInETHString} ETH (${gasCostInUSDString} USD) to complete. When claiming, your wallet may show a higher, less accurate estimate (`}
           ).
         </Text>
       </Flex>
