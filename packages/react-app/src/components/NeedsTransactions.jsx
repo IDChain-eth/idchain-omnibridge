@@ -1,4 +1,4 @@
-import { Flex, Image, Link, Text } from '@chakra-ui/react';
+import { Flex, Image, Text } from '@chakra-ui/react';
 import { utils } from 'ethers';
 import React from 'react';
 
