@@ -73,7 +73,7 @@ export const subgraphNames = {
 
 export const graphEndpoints = {
   74: `https://graph.idchain.one/subgraphs/name/${subgraphNames[74]}`,
-  1: `https://graph.idchain.one/subgraphs/name/${subgraphNames[1]}`,
+  1: `https://graph.idchain.one/mainnet/subgraphs/name/${subgraphNames[1]}`,
 };
 
 export const mediators = {
