@@ -32,6 +32,9 @@ export const useGraphHealth = (description, onlyHome = false) => {
   const [foreignHealthy, setForeignHealthy] = useState(true);
   setForeignHealthy(true);
 
+  const [loading, setLoading] = useState(false);
+  setLoading(false);
+
   /*
 
   const { providerChainId } = useContext(Web3Context);
