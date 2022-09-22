@@ -22,6 +22,8 @@
     "subgraph:deploy-idchain": "yarn workspace @omnibridge/subgraph deploy-idchain",
     "subgraph:prepare-mainnet": "yarn workspace @omnibridge/subgraph prepare-mainnet",
     "subgraph:deploy-mainnet": "yarn workspace @omnibridge/subgraph deploy-mainnet",
+    "subgraph:create-mainnet": "yarn workspace @omnibridge/subgraph create-mainnet",
+    "subgraph:remove-mainnet": "yarn workspace @omnibridge/subgraph remove-mainnet",
     "react-app:build": "yarn workspace @omnibridge/react-app build",
     "react-app:eject": "yarn workspace @omnibridge/react-app eject",
     "react-app:start": "yarn workspace @omnibridge/react-app start",
