@@ -23,7 +23,7 @@
     "deploy-idchain": "graph deploy idchain-omnibridge --ipfs http://localhost:5001 --node http://localhost:8020/",
     "create-mainnet": "graph create --node http://localhost:8021/ mainnet-omnibridge",
     "remove-mainnet": "graph remove --node http://localhost:8021/ mainnet-omnibridge",
-    "deploy-mainnet": "graph deploy mainnet-omnibridge --ipfs http://localhost:5001 --node http://localhost:8021/"
+    "deploy-mainnet": "graph deploy mainnet-omnibridge --ipfs http://localhost:5001 --node http://localhost:9020/"
   },
   "devDependencies": {
     "mustache": "^4.0.1"
