@@ -68,12 +68,12 @@ export const defaultTokens = {
 
 export const subgraphNames = {
   74: 'idchain-omnibridge',
-  1: 'crisog/idchain-omnibridge',
+  1: 'mainnet-omnibridge',
 };
 
 export const graphEndpoints = {
   74: `https://graph.idchain.one/subgraphs/name/${subgraphNames[74]}`,
-  1: `https://api.thegraph.com/subgraphs/name/${subgraphNames[1]}`,
+  1: `https://graph.idchain.one/subgraphs/name/${subgraphNames[1]}`,
 };
 
 export const mediators = {
