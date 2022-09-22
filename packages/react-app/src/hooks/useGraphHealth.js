@@ -30,11 +30,15 @@ export const useGraphHealth = (description, onlyHome = false) => {
   // We can't use the graph health api for self-hosted graph nodes
 
   const [foreignHealthy, setForeignHealthy] = useState(true);
-  setForeignHealthy(true);
-
+  if(!foreignHealthy){
+    setForeignHealthy(true);
+  }
+  
   const [loading, setLoading] = useState(false);
-  setLoading(false);
-
+  if(loading){
+    setLoading(false);
+  }
+    
   /*
 
   const { providerChainId } = useContext(Web3Context);
