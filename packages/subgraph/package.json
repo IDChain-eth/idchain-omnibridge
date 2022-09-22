@@ -21,8 +21,8 @@
     "create-idchain": "graph create --node http://localhost:8020/ idchain-omnibridge",
     "remove-idchain": "graph remove --node http://localhost:8020/ idchain-omnibridge",
     "deploy-idchain": "graph deploy idchain-omnibridge --ipfs http://localhost:5001 --node http://localhost:8020/",
-    "create-mainnet": "graph create --node http://localhost:8021/ mainnet-omnibridge",
-    "remove-mainnet": "graph remove --node http://localhost:8021/ mainnet-omnibridge",
+    "create-mainnet": "graph create --node http://localhost:9020/ mainnet-omnibridge",
+    "remove-mainnet": "graph remove --node http://localhost:9020/ mainnet-omnibridge",
     "deploy-mainnet": "graph deploy mainnet-omnibridge --ipfs http://localhost:5001 --node http://localhost:9020/"
   },
   "devDependencies": {
