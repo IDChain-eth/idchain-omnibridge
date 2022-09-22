@@ -28,7 +28,11 @@ const THRESHOLD_BLOCKS =
 
 export const useGraphHealth = (description, onlyHome = false) => {
   // We can't use the graph health api for self-hosted graph nodes
-  return;
+
+  const [foreignHealthy, setForeignHealthy] = useState(true);
+  setForeignHealthy(true);
+
+  /*
 
   const { providerChainId } = useContext(Web3Context);
 
@@ -111,4 +115,5 @@ export const useGraphHealth = (description, onlyHome = false) => {
       }
     }
   }, [foreignHealthy, loading, toast, onlyHome, isHome, description]);
+*/
 };
