@@ -20,10 +20,10 @@
     "deploy-sokol": "graph deploy dan13ram/sokol-omnibridge --ipfs https://api.thegraph.com/ipfs/ --node https://api.thegraph.com/deploy/",
     "create-idchain": "graph create --node http://localhost:8020/ idchain-omnibridge",
     "remove-idchain": "graph remove --node http://localhost:8020/ idchain-omnibridge",
-    "deploy-idchain": "graph deploy idchain-omnibridge --ipfs http://localhost:5001 --node http://localhost:8020/"
+    "deploy-idchain": "graph deploy idchain-omnibridge --ipfs http://localhost:5001 --node http://localhost:8020/",
     "create-mainnet": "graph create --node http://localhost:8021/ mainnet-omnibridge",
     "remove-mainnet": "graph remove --node http://localhost:8021/ mainnet-omnibridge",
-    "deploy-idchain": "graph deploy mainnet-omnibridge --ipfs http://localhost:5001 --node http://localhost:8021/"
+    "deploy-mainnet": "graph deploy mainnet-omnibridge --ipfs http://localhost:5001 --node http://localhost:8021/"
   },
   "devDependencies": {
     "mustache": "^4.0.1"
