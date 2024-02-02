@@ -7,7 +7,22 @@ const gasPriceOracle = new GasPriceOracle();
 
 const gasPriceFromSupplier = async () => {
   try {
-    const json = await gasPriceOracle.fetchGasPricesOffChain();
+    let json;
+    try {
+      json = await gasPriceOracle.fetchGasPricesOffChain();
+    } catch (e) {
+      logError(`Gas Price Oracle not available. ${e.message}`);
+
+      json = {
+        rapid: 23463150307,
+        fast: 17333603729,
+        standard: 17333603729,
+        slow: 17333603729,
+        timestamp: 1706788121471,
+        price: 2267.03,
+        priceUSD: 2267.03,
+      };
+    }
 
     if (!json) {
       logError(`Response from Oracle didn't include gas price`);
